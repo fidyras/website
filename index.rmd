@@ -10,6 +10,17 @@ output:
       - { title: "Twitter", href: "https://twitter.com/fidydvm", align: right, icon: fa-twitter }
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5Q9PG727J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G5Q9PG727J');
+</script>
+
+
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(tidyverse)

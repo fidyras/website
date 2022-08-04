@@ -1,0 +1,10 @@
+title: "Fidisoa Rasambainarivo, DVM, MSc, PhD"
+output_dir: 'docs'
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      version: 4
+    source_code: embed
+    navbar:
+      - { title: "Mahaliana", href: "https://www.mahaliana.org", align: right, icon: fa-flask}
+      - { title: "Twitter", href: "https://twitter.com/fidydvm", align: right, icon: fa-twitter }

@@ -73,22 +73,22 @@ To facilitate research in Madagascar, help build local scientific capabilities o
 
 ***Education***
 
-2013 -- 2018: PhD in Biology (Ecology, Evolution and Systematics) University of Missouri Saint Louis Wildlife and Domestic Animal Health: interactions and disease transmission in and around protected areas in Madagascar. Advisor: Patricia Parker, PhD
+2013 -- 2018: PhD in Biology (Ecology, Evolution and Systematics) University of Missouri Saint Louis - *Wildlife and Domestic Animal Health: interactions and disease transmission in and around protected areas in Madagascar*. Advisor: Patricia Parker, PhD
 
-2011 - 2013 : MSc in veterinary sciences (option: Epidemiology) Faculté de médecine vétérinaire- Université de Montréal, Canada Prevalence of potentially zoonotic parasites at the human wildlife interface in the Ranomafana National Park ecosystem in Madagascar. Advisors: Stéphane Lair DMV, DES, Dipl. ACZM & Julie Arsenault DMV, MSc, PhD
+2011 - 2013 : MSc in veterinary sciences (option: Epidemiology) Faculté de médecine vétérinaire- Université de Montréal, Canada - -*Prevalence of potentially zoonotic parasites at the human wildlife interface in the Ranomafana National Park ecosystem in Madagascar.* Advisors: Stéphane Lair DMV, DES, Dipl. ACZM & Julie Arsenault DMV, MSc, PhD
 
-2007: Internship in conservation medicine Saint Louis Zoo, Duke Lemur Center, University of Missouri Columbia, USA Advisors: Randall E Junge, DVM MS Dipl. ACZM, Cathy Williams DVM Dipl. ACAW
+2007: Internship in conservation medicine Saint Louis Zoo, Duke Lemur Center, University of Missouri Columbia, USA. Advisors: Randall E Junge, DVM MS Dipl. ACZM, Cathy Williams DVM Dipl. ACAW
 
 2002 -2008 : Doctor of veterinary medicine Department of veterinary sciences and medicine, University of Antananarivo, Madagascar
 
 ***Teaching Experience***
 
-*Lectures and workshop*
+*Lectures and workshops*
 
 2019 - present: Epidemiology, lecturer, 5th year veterinary students\
 Department of Veterinary Sciences and Medicine, University of Antananarivo, Madagascar
 
-2019 - present : MolEcol & R: Molecular biology and diagnosis Instructor: Designed and delivered lectures and exercises for introductory molecular biology and diagnostics methods for Biology, Public Health and Veterinary students in Madagascar
+2019 - present : MolEcol & R: Molecular biology and diagnosis - Instructor: Designed and delivered lectures and exercises for introductory molecular biology and diagnostics methods for Biology, Public Health and Veterinary students in Madagascar
 
 2018 - Present : E2M2: Ecological and Epidemiological Modeling in Madagascar. Instructor: Designed and delivered lectures and exercises for introductory programming workshop for Biology, Public Health and Veterinary students in Madagascar (Network Modeling, Occupancy Modeling, Spatial Analysis)
 
@@ -167,6 +167,9 @@ These data can also be used to assess the effects of anthropogenic habitat chang
 
 ### Zoonotic diseases at the human domestic animal and wildlife interface in Betampona, Madagascar
 
+***On the figure below, you can edit the network (and delete nodes) to evaluate the effect of vaccinating/removing animals to prevent an hypothetical outbreak.***
+
+
 ```{r}
 library(visNetwork)
 nodeinfo <- read.csv("content/data/network/nodeinfo_all.csv")
@@ -177,21 +180,21 @@ edges <- read.csv("content/data/network/edges.csv")
 
 
 Net<-visNetwork(nodes,edges,width="100%",main="Microbial Sharing Network between Carnivores of Betampona", submain="using DNA fingerprinting of E.coli", footer= "Rasambainarivo et al., in prep")%>%
-  visGroups(groupname="Canis familiaris",color="darkblue",shape="square")%>%
-  visGroups(groupname="Cryptoprocta ferox",color="forestgreen",shape="circle")%>%
-  visGroups(groupname="Galidictis fasciata",color="gold",shape="circle")%>%
-  visGroups(groupname="Galidia elegans",color="darkred",shape="circle")%>%
-  visGroups(groupname="Felis catus",color="red",shape="star")%>%
-  visLegend(position="left",main="Species",stepY = 200)
+  visGroups(groupname="Canis familiaris",color="darkblue",shape="icon", icon = list(face = "'Font Awesome 5 Free'", code = "f6d3", size = 75))%>%
+  visGroups(groupname="Cryptoprocta ferox",color="forestgreen",shape="icon", icon = list(face = "'Font Awesome 5 Free'", code = "f6d5", color= "green", size = 75))%>%
+  visGroups(groupname="Galidictis fasciata",color="gold",shape="icon", icon = list(face = "'Font Awesome 5 Free'", code = "f6ed", color= "gold", size = 75))%>%
+  visGroups(groupname="Galidia elegans",shape="icon", icon = list(face = "'Font Awesome 5 Free'", code = "f700", size = 75,color="darkred"))%>%
+  visGroups(groupname="Felis catus",color="red",shape="icon", icon = list(face = "'Font Awesome 5 Free'", code = "f6be", size = 75, color= "red"))%>%
+  visLegend(position="left",main="Species",stepY = 200) %>% addFontAwesome(version="5.13.0")
 #set layout of network
 Net<-Net%>%visPhysics(maxVelocity = 40)%>%
   visLayout(randomSeed = 123)
 
 #highlight nearest nodes
-# Net%>%visOptions(highlightNearest=TRUE)%>%
+ #Net%>%
 #   visOptions(selectedBy = "group")
 
-Net%>%visOptions(manipulation=TRUE) %>% visPhysics(stabilization = FALSE)
+Net%>%visOptions(highlightNearest=TRUE)%>%visOptions(manipulation=TRUE) %>% visPhysics(stabilization = FALSE)
 
 ```
 
@@ -201,7 +204,7 @@ With this project, we aim to evaluate the impact of domestic animals on endemic 
 
 Using statistical and mathematical models, we will synthesize findings to **develop a framework for identifying areas where health management in domestic and wildlife is likely to be particularly valuable**. Despite the importance of these pathogens, mathematical models of transmission and spread remain rare. We will fill this gap by designing mathematical models to probe the scale of conservation impacts that could be achieved, grounding model structure on the data described.
 
-***On the figure on the left, you can edit the network (and delete nodes) to evaluate the effect of vaccinating animals to prevent an hypothetical outbreak.***
+
 
 ### Improving rural livelihood and supporting wildlife conservation through poultry vaccination in villages near protected areas of Madagascar.
 

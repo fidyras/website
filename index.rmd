@@ -4,7 +4,6 @@ output:
   flexdashboard::flex_dashboard:
     theme:
       version: 4
-    source_code: embed
     navbar:
       - { title: "Mahaliana", href: "https://www.mahaliana.org", align: right, icon: fa-flask}
       - { title: "Twitter", href: "https://twitter.com/fidydvm", align: right, icon: fa-twitter }
@@ -43,7 +42,7 @@ I am a wildlife veterinarian interested in the ecological approaches to health a
 
 I obtained my veterinary degree from the Department of Veterinary Medicine and Sciences (DESMV) of the University of Antananarivo, Madagascar and a Master's degree in epidemiology from the faculté de médecine vétérinaire of the Université de Montréal, Canada and a PhD in Biology (Ecology, Evolution and Systematics) at the University of Missouri Saint Louis, USA.
 
-Using a combination of fieldwork, laboratory and data analysis as well as computational modeling, my research interests focus on the potential impacts of humans and domestic animals on wildlife health in various ecosystems in Madagascar.
+Using a combination of fieldwork, laboratory and data analysis as well as computational modeling, my research interests focus on the potential impacts of humans and domestic animals on wildlife health in Madagascar.
 
 To facilitate research in Madagascar, help build local scientific capabilities of Malagasy researchers and advance conservation science, I co-founded **Mahaliana Labs** in Madagascar and act as the scientific director. At Mahaliana, I lead and manage several research projects, mainly on the health and diseases of wild animals and their interactions with humans & domestic animals.
 
